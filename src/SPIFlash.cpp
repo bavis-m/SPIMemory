@@ -112,7 +112,7 @@ bool SPIFlash::begin(uint32_t flashChipSize) {
   Serial.println(F("Highspeed mode initiated."));
   Serial.println();
 #endif
-  if (_SPIInUse == ALTSPI) {
+  if (_SPIInUse == STDSPI) {
     #if defined (ARDUINO_ARCH_ESP32)
     SPI.begin(_nonStdSPI.sck, _nonStdSPI.miso, _nonStdSPI.mosi, _nonStdSPI.ss);
     #endif

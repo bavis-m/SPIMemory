@@ -92,7 +92,7 @@ This Arduino library is for use with flash and FRAM memory chips that communicat
     <sub>* Optional. Do not include csPin if using the default slave select pin for your board.</sub>
 - Every version of the library >= v3.0.0 supports the ability to use any of multiple SPI interfaces (if your micro-controller supports them). Switching to use another SPI interface is done by calling ```SPIFlash flash(csPin, &SPI1);``` (or &SPI2 and so on), instead of ```SPIFlash flash(csPin)```.
 
-    <sub>* NOTE: This is currently only supported on the SAMD and STM32 architectures.</sub>
+    <sub>* NOTE: This is currently only supported on the SAMD, STM32 and ESP32 architectures.</sub>
 - An alternate version ```SPIFlash flash (SPIPinsArray)``` of the constructor can be used (only with ESP32 board as of now) to enable the use of custom SPI pins. ```SPIPinsArray``` has to be a 4 element array containing the custom SPI pin numbers (as signed integers - int8_t) in the following order - sck, miso, mosi, ss.
 - Also make sure to include ```flash.begin(CHIPSIZE*)``` in ```void setup()```. This enables the library to detect the type of flash chip installed and load the right parameters.
 
