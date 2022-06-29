@@ -189,7 +189,7 @@
 #define STDSPI        0x0A
 #define ALTSPI     0x0B
 #if defined (ARDUINO_ARCH_ESP32)
-#define SPI_CLK       20000000        //Hz equivalent of 20MHz
+#define SPI_CLK       10000000        //Hz equivalent of 10MHz
 #else
 #define SPI_CLK       104000000       //Hz equivalent of 104MHz
 #endif
